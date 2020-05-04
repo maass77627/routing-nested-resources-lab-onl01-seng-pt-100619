@@ -1,13 +1,9 @@
 class SongsController < ApplicationController
   def artists_index
-  #  @song = Song.find(params[:id])
-  #  @artists = @song.artists
-  #  render template: 'artists/index'
-  if params[:artist_id]
-      @posts = Artist.find(params[:artist_id]).posts
-    else
-      @posts = Post.all
-    end
+   @song = Song.find(params[:id])
+   @artists = @song.artists
+   render template: 'artists/index'
+  
   end
 
   def artist
