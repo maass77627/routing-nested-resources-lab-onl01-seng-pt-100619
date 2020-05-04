@@ -8,9 +8,6 @@ class SongsController < ApplicationController
 
   def artist
    @song = Song.find(params[:id])
-
-   # Note that because ids are unique by table we can go directly to
-   # Post.find — no need for @author.posts.find...
    @artist = Artist.find(params[:artist_id])
    render template: 'artists/songs'
  end
