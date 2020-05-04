@@ -3,7 +3,7 @@ class SongsController < ApplicationController
    @song = Song.find(params[:id])
    @artists = @song.artists
    render template: 'artists/index'
-  
+
   end
 
   def artist
